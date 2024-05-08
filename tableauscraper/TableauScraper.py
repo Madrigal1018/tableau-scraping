@@ -77,7 +77,7 @@ class TableauScraper:
             soup = BeautifulSoup(r, "html.parser")
 
         self.tableauData = json.loads(
-            soup.find("textarea", {"id": "tsConfigContainer"}).text
+            soup.find("textarea", {"id": "staticConfigContainer"}).text
         )
 
         uri = urlparse(url)
